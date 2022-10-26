@@ -114,10 +114,10 @@ class neuralNetwork:
         hidden_outputs = numpy.dot(self.who.T, final_inputs)
         # 反向归一化大致
         # scale them back to 0.01 to .99
-        hidden_outputs -= numpy.min(hidden_outputs)
-        hidden_outputs /= numpy.max(hidden_outputs)
-        hidden_outputs *= 0.98
-        hidden_outputs += 0.01
+        hidden_outputs -= numpy.min(hidden_outputs)     #举例：[2,5,9]-2=[0,3,7]
+        hidden_outputs /= numpy.max(hidden_outputs)     #举例：[0,3,7]/7 =[0,3/7,1]
+        hidden_outputs *= 0.98      #举例[0,3/7,1]*0.98  =[0,0.42,0.98]
+        hidden_outputs += 0.01      #举例[0,0.42,0.98]+0.01= [0.01,0.43,0.99]
         
         # 隐藏层输入=反向激活函数（隐藏层输出信号）
         hidden_inputs = self.inverse_activation_function(hidden_outputs)
