@@ -2,6 +2,10 @@
 神经网络测试，neuralnetwork
 
 jupyter book 中文乱码，直接上传文本试试
+.com改成.dev  或者代码界面按键盘.号 可以把github用网页版vscode打开，编辑提交
+https://github.com/zpf2617/zpf2617
+https://github.dev/zpf2617/zpf2617
+
 
 第一部分 NeuralNetwork_train.py
 #《Py神经网络编程》塔里克·拉希德，人民邮电出版社，出版时间2018-04，第2章第4节编程实例
