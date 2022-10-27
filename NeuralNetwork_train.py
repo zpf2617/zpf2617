@@ -112,7 +112,7 @@ class neuralNetwork:
 
         # 隐藏层输出=输出层输入/隐藏节点输出节点权重矩阵   逆矩阵.T = ÷
         hidden_outputs = numpy.dot(self.who.T, final_inputs)
-        # 反向归一化大致
+        # 反向归一化大致,按比例缩放hidden_outputs数据范围
         # scale them back to 0.01 to .99
         hidden_outputs -= numpy.min(hidden_outputs)     #举例：[2,5,9]-2=[0,3,7]
         hidden_outputs /= numpy.max(hidden_outputs)     #举例：[0,3,7]/7 =[0,3/7,1]
